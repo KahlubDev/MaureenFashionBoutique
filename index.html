@@ -1,121 +1,314 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maureen Fashion Boutique</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+```
+<title>Maureen Fashion Boutique</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Anime.js -->
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+```
+
 </head>
 
 <body class="bg-white text-gray-800">
 
-    <!-- Navigation -->
-    <header class="bg-white shadow-sm">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-pink-600">
-                Maureen Fashion
-            </h1>
+```
+<!-- Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <div class="hidden md:flex gap-6">
-                <a href="#" class="hover:text-pink-600">Home</a>
-                <a href="#collections" class="hover:text-pink-600">Collections</a>
-                <a href="#about" class="hover:text-pink-600">About</a>
-                <a href="#contact" class="hover:text-pink-600">Contact</a>
-            </div>
-        </nav>
-    </header>
+        <a href="#" class="text-2xl font-bold text-pink-600">
+            Maureen Fashion
+        </a>
 
-    <!-- Hero Section -->
-    <section class="bg-pink-50">
-        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Style Made for You
-            </h2>
-
-            <p class="text-lg text-gray-600 max-w-xl mx-auto mb-8">
-                Discover stylish, affordable and elegant fashion at Maureen Fashion Boutique.
-            </p>
-
-            <a href="#collections"
-               class="inline-block bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700">
-                Shop Our Collection
-            </a>
+        <div class="hidden md:flex gap-8">
+            <a href="#" class="hover:text-pink-600 transition">Home</a>
+            <a href="#collections" class="hover:text-pink-600 transition">Collections</a>
+            <a href="#about" class="hover:text-pink-600 transition">About</a>
+            <a href="#contact" class="hover:text-pink-600 transition">Contact</a>
         </div>
-    </section>
 
-    <!-- Collections -->
-    <section id="collections" class="max-w-6xl mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold text-center mb-10">
+    </nav>
+</header>
+
+
+<!-- Hero Section -->
+<section class="min-h-screen bg-pink-50 pt-24">
+
+    <div class="max-w-6xl mx-auto px-6 py-16">
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Hero Text -->
+            <div id="hero-text">
+
+                <p class="text-pink-600 font-semibold uppercase tracking-widest mb-4">
+                    Maureen Fashion Boutique
+                </p>
+
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                    Style Made
+                    <span class="text-pink-600">For You</span>
+                </h1>
+
+                <p class="text-lg text-gray-600 max-w-lg mb-8">
+                    Discover stylish, affordable and elegant fashion pieces
+                    designed to make every occasion special.
+                </p>
+
+                <div class="flex gap-4">
+
+                    <a href="#collections"
+                    class="bg-pink-600 text-white px-6 py-3 rounded-lg
+                            hover:bg-pink-700 transition">
+                        Shop Collection
+                    </a>
+
+                    <a href="#about"
+                    class="border border-gray-300 px-6 py-3 rounded-lg
+                            hover:bg-white transition">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Image -->
+            <div id="hero-image" class="relative">
+
+                <img
+                    src="/assets/images/pexels-cottonbro-5236997.jpg"
+                    alt="Maureen Fashion Boutique collection"
+                    class="w-full h-[500px] object-cover rounded-2xl shadow-xl"
+                >
+
+                <div class="absolute bottom-6 left-6 bg-white px-5 py-4 rounded-xl shadow-lg">
+                    <p class="text-sm text-gray-500">
+                        New Collection
+                    </p>
+
+                    <p class="font-bold text-lg">
+                        2026 Collection
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Featured Collections -->
+<section id="collections" class="max-w-6xl mx-auto px-6 py-20">
+
+    <div class="text-center mb-12">
+
+        <p class="text-pink-600 font-semibold uppercase tracking-widest">
+            Explore
+        </p>
+
+        <h2 class="text-4xl font-bold text-gray-900 mt-2">
             Our Collections
         </h2>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <p class="text-gray-600 mt-4">
+            Find a style that fits your personality and occasion.
+        </p>
 
-            <div class="bg-gray-100 rounded-lg p-8 text-center">
-                <div class="text-5xl mb-4">👗</div>
-                <h3 class="text-xl font-semibold mb-2">Dresses</h3>
-                <p class="text-gray-600">
+    </div>
+
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Collection 1 -->
+        <div class="group overflow-hidden rounded-2xl shadow-md">
+
+            <div class="overflow-hidden">
+                <img
+                    src="/assets/images/pexels-ja-kubislav-374578277-14534753.jpg"
+                    alt="Dresses"
+                    class="w-full h-80 object-cover group-hover:scale-105 transition duration-500"
+                >
+            </div>
+
+            <div class="p-6 bg-white">
+
+                <h3 class="text-xl font-bold mb-2">
+                    Dresses
+                </h3>
+
+                <p class="text-gray-600 mb-4">
                     Elegant dresses for every occasion.
                 </p>
+
+                <a href="#" class="text-pink-600 font-semibold hover:text-pink-800">
+                    View Collection →
+                </a>
+
             </div>
 
-            <div class="bg-gray-100 rounded-lg p-8 text-center">
-                <div class="text-5xl mb-4">👚</div>
-                <h3 class="text-xl font-semibold mb-2">Women's Wear</h3>
-                <p class="text-gray-600">
+        </div>
+
+
+        <!-- Collection 2 -->
+        <div class="group overflow-hidden rounded-2xl shadow-md">
+
+            <div class="overflow-hidden">
+                <img
+                    src="/assets/images/pexels-cottonbro-5236997.jpg"
+                    alt="Women's Wear"
+                    class="w-full h-80 object-cover group-hover:scale-105 transition duration-500"
+                >
+            </div>
+
+            <div class="p-6 bg-white">
+
+                <h3 class="text-xl font-bold mb-2">
+                    Women's Wear
+                </h3>
+
+                <p class="text-gray-600 mb-4">
                     Modern styles for your everyday look.
                 </p>
+
+                <a href="#" class="text-pink-600 font-semibold hover:text-pink-800">
+                    View Collection →
+                </a>
+
             </div>
 
-            <div class="bg-gray-100 rounded-lg p-8 text-center">
-                <div class="text-5xl mb-4">👜</div>
-                <h3 class="text-xl font-semibold mb-2">Accessories</h3>
-                <p class="text-gray-600">
+        </div>
+
+
+        <!-- Collection 3 -->
+        <div class="group overflow-hidden rounded-2xl shadow-md">
+
+            <div class="overflow-hidden">
+                <img
+                    src="/assets/images/pexels-cottonbro-5236997.jpg"
+                    alt="Accessories"
+                    class="w-full h-80 object-cover group-hover:scale-105 transition duration-500"
+                >
+            </div>
+
+            <div class="p-6 bg-white">
+
+                <h3 class="text-xl font-bold mb-2">
+                    Accessories
+                </h3>
+
+                <p class="text-gray-600 mb-4">
                     Complete your outfit with stylish accessories.
                 </p>
+
+                <a href="#" class="text-pink-600 font-semibold hover:text-pink-800">
+                    View Collection →
+                </a>
+
             </div>
 
         </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="bg-gray-50">
-        <div class="max-w-4xl mx-auto px-6 py-16 text-center">
-            <h2 class="text-3xl font-bold mb-4">
-                About Maureen Fashion Boutique
-            </h2>
+    </div>
 
-            <p class="text-gray-600">
-                We provide quality fashion pieces designed to help you look
-                confident and stylish. Visit us and find something perfect
-                for your personal style.
-            </p>
-        </div>
-    </section>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h2 class="text-3xl font-bold mb-4">
-            Visit Us
+
+<!-- About -->
+<section id="about" class="bg-gray-50">
+
+    <div class="max-w-5xl mx-auto px-6 py-20 text-center">
+
+        <p class="text-pink-600 font-semibold uppercase tracking-widest">
+            About Us
+        </p>
+
+        <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Fashion With Personality
         </h2>
 
-        <p class="text-gray-600 mb-6">
-            Get in touch with Maureen Fashion Boutique today.
+        <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Maureen Fashion Boutique provides quality fashion pieces
+            designed to help you look confident and stylish. We offer
+            carefully selected clothing and accessories for different
+            occasions and personal styles.
         </p>
 
-        <a href="tel:+254700000000"
-           class="inline-block bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700">
-            Contact Us
-        </a>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white text-center py-6">
-        <p>
-            &copy; 2026 Maureen Fashion Boutique. All rights reserved.
-        </p>
-    </footer>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+
+    <p class="text-pink-600 font-semibold uppercase tracking-widest">
+        Get In Touch
+    </p>
+
+    <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-4">
+        Visit Maureen Fashion
+    </h2>
+
+    <p class="text-gray-600 mb-8">
+        Ready to find your next favorite outfit?
+    </p>
+
+    <a
+        href="tel:+254700000000"
+        class="inline-block bg-pink-600 text-white px-8 py-3 rounded-lg
+            hover:bg-pink-700 transition"
+    >
+        Contact Us
+    </a>
+
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-center py-8">
+
+    <p>
+        &copy; 2026 Maureen Fashion Boutique. All rights reserved.
+    </p>
+
+</footer>
+
+
+<!-- Anime.js Animations -->
+<script>
+
+    anime({
+        targets: '#hero-text',
+        translateX: [-50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo'
+    });
+
+    anime({
+        targets: '#hero-image',
+        translateX: [50, 0],
+        opacity: [0, 1],
+        duration: 1200,
+        delay: 200,
+        easing: 'easeOutExpo'
+    });
+
+</script>
+```
 
 </body>
 </html>
